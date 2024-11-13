@@ -1,0 +1,10 @@
+<h2 style="text-align: center; font-size: 24px; color: #333;">Multas</h2>
+<ul style="border: 1px solid #ddd; padding: 20px; max-width: 600px; margin: auto; border-radius: 8px; list-style-type: none;">
+    {% for multa in multas %}
+        <li style="padding: 10px; border-bottom: 1px solid #ddd;">
+            Usuário: {{ multa.emprestimo.usuario.nome }} - Valor: R$ {{ multa.valor }} - Status: {{ multa.status }}
+        </li>
+    {% empty %}
+        <li style="text-align: center;">Nenhuma multa registrada.</li>
+    {% endfor %}
+</ul>

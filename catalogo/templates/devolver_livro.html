@@ -1,0 +1,15 @@
+<h2 style="text-align: center; font-size: 24px; color: #333;">Devolver Livro</h2>
+<form method="POST" style="border: 1px solid #ddd; padding: 20px; max-width: 400px; margin: auto; border-radius: 8px;">
+    {% csrf_token %}
+    <label for="codigo_exemplar">Código do Exemplar:</label>
+    <select id="codigo_exemplar" name="codigo_exemplar" style="width: 100%; padding: 8px; margin-bottom: 10px;">
+        {% for exemplar in exemplares_emprestados %}
+            <option value="{{ exemplar.codigo_exemplar }}">{{ exemplar.codigo_exemplar }} - {{ exemplar.livro.titulo }}</option>
+        {% endfor %}
+    </select><br>
+
+    <label for="data_devolucao">Data de Devolução:</label>
+    <input type="date" id="data_devolucao" name="data_devolucao" required style="width: 100%; padding: 8px; margin-bottom: 20px;"><br>
+
+    <button type="submit" style="width: 100%; padding: 10px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; font-size: 16px;">Devolver</button>
+</form>

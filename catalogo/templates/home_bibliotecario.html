@@ -1,0 +1,14 @@
+<h2 style="text-align: center; font-size: 24px; color: #333;">Bem-vindo, Bibliotecário!</h2>
+<p style="text-align: center;">Escolha uma das opções abaixo:</p>
+<ul style="list-style-type: none; text-align: center; padding: 0;">
+    <li><a href="{% url 'cadastrar_livro' %}" style="color: #007bff; text-decoration: none;">Cadastrar Livro</a></li>
+    <li><a href="{% url 'listar_livros' %}" style="color: #007bff; text-decoration: none;">Listar Livros</a></li>
+    <li><a href="{% url 'emprestar_livro' %}" style="color: #007bff; text-decoration: none;">Emprestar Livro</a></li>
+    <li><a href="{% url 'devolver_livro' %}" style="color: #007bff; text-decoration: none;">Devolver Livro</a></li>
+    <li><a href="{% url 'reservar_livro' %}" style="color: #007bff; text-decoration: none;">Reservar Livro</a></li>
+    <li><a href="{% url 'visualizar_multas' %}" style="color: #007bff; text-decoration: none;">Visualizar Multas</a></li>
+    <li><a href="{% url 'marcar_exemplar_indisponivel' %}" style="color: #007bff; text-decoration: none;">Marcar Exemplar como Indisponível</a></li>
+</ul>
+<div style="text-align: center; margin-top: 20px;">
+    <a href="{% url 'logout_usuario' %}" style="padding: 10px 20px; background-color: #dc3545; color: #fff; border-radius: 5px; text-decoration: none;">Sair</a>
+</div>
